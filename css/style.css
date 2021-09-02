@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+}
+#campo{
+    display: flex;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 700px;
+}
+.caselle{
+    width: 70px;
+    height: 70px;
+    background-color: palevioletred;
+    border: 1px solid purple;
+}
+.caselle-click{
+    background-color: purple;
+}
