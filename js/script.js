@@ -29,6 +29,29 @@ for (var i=1; i<=16;i++){
     }
 };
 console.log(numeriRandomBombe);
+//livello gioco
+var livello = document.getElementById("livello-gioco").value;
+var livelloBase=100;
+var livelloMedio=80;
+var livelloAvanzato=50;
+
+
+if (livello == "base"){
+    livello=livelloBase;
+}else if(livello == "medio"){
+    livello=livelloMedio;
+}else{
+    livello=livelloAvanzato;
+}
+console.log(livello);
+ function creazioneGriglia(num1){
+    for (var i=1;i<=num1;i++){
+        document.getElementById("campo").innerHTML+=`<div class="caselle">${i}</div>`;
+    } 
+   }
+
+  creazioneGriglia(livello);
+
 // // var numeroCelle=parseInt(prompt("Ciao,scegli il numero di celle tra 1 e 100"));
 // // // console.log(numeroCelle);
 

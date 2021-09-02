@@ -6,19 +6,23 @@
 body{
     background-color: antiquewhite;
 }
+
 #campo{
     display: flex;
-    padding-top: 50px;
+    padding-top: 30px;
     flex-wrap: wrap;
     margin: auto;
-    max-width: 700px;
+    max-width: 600px;
 }
 .caselle{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background-color: palevioletred;
     border: 1px solid purple;
 }
 .caselle-click{
     background-color: purple;
+}
+.bombe{
+    background-color: rgb(214, 187, 32);
 }
