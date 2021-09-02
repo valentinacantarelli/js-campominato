@@ -12,7 +12,6 @@
 
 //array che conterrà i numeri random per le caselle in cui ci sono le bombe
 var numeriRandomBombe=[];
-
 //creo un ciclo che mi restituisca 16 numeri random tra 1 e 100
 for (var i=1; i<=16;i++){
     var numero = Math.floor(Math.random()*100)+1;
@@ -30,28 +29,6 @@ for (var i=1; i<=16;i++){
     }
 };
 console.log(numeriRandomBombe);
-// // var min = 1;
-// // var max = 90;
-// // var stop = 6;  //Number of numbers to extract
-
-// // var numbers = [];
-
-// // for (let i = 0; i < stop; i++) {
-// //   var n =  Math.floor(Math.random() * max) + min;
-// //   var check = numbers.includes(n);
-
-// // if(check === false) {
-// //   numbers.push(n);
-// // } else {
-// //   while(check === true){
-// //     n = Math.floor(Math.random() * max) + min;
-// //     check = numbers.includes(n);
-// //       if(check === false){
-// //         numbers.push(n);
-// //       }
-// //     }
-// //   }
-// // }
 // // var numeroCelle=parseInt(prompt("Ciao,scegli il numero di celle tra 1 e 100"));
 // // // console.log(numeroCelle);
 
