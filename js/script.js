@@ -57,43 +57,22 @@ var bombe=16;
 
 //eventi al click,funzionamento del gioco
 
-  document.getElementById("campo").addEventListener("click",
-     function(event){
-         var numeroCliccato=parseInt(event.target.innerHTML);
-         if(inArray(numeriRandomBombe,numeroCliccato) == true){
-             alert("Hai perso! U__U Il tuo punteggio è:"+ numeriConsentiti.length);
-             location.reload();
-         }else if(inArray(numeriConsentiti,numeroCliccato)==true){
-             alert("Hai già cliccato questa casella!");
-         }else{
-             numeriConsentiti.push(numeroCliccato);
-             event.target.classList.add("caselle-click");
-             if(numeriConsentiti.length==chance){
-                 alert("Hai vinto!!");
-                 location.reload();
-             }
-         }
+document.getElementById("campo").addEventListener("click",
+    function(event){
+        var numeroCliccato=parseInt(event.target.innerHTML);
+        if(inArray(numeriRandomBombe,numeroCliccato) == true){
+            alert("Hai perso! U__U Il tuo punteggio è:"+ numeriConsentiti.length);
+            location.reload();
+        }else if(inArray(numeriConsentiti,numeroCliccato)==true){
+            alert("Hai già cliccato questa casella!");
+        }else{
+            numeriConsentiti.push(numeroCliccato);
+            event.target.classList.add("caselle-click");
+            if(numeriConsentiti.length==chance){
+                alert("Hai vinto!!");
+                location.reload();
+            }
+        }
+    }
+);
 
-     }
-
-  );
-
-// document.getElementById("campo").addEventListener("click",
-// 	function(event) {
-// 		var numeroCliccato = parseInt(event.target.innerHTML);
-// 		if ( inArray(bombe, numeroCliccato) == true ) {
-// 			alert("Hai perso! mi disp!! il tuo punteggio: " + numeriValidi.length);
-// 			location.reload();
-// 		} else if ( inArray(numeriValidi, numeroCliccato) == true ) {
-// 			alert("hai gia cliccato su questo numero! :p");
-// 		} else {
-// 			numeriValidi.push(numeroCliccato);
-// 			event.target.classList.add("cliccato");
-
-// 			if ( numeriValidi.length == possibilita ) {
-// 				alert("Bravissimo!! hai finito il gioco!!");
-// 				location.reload();
-// 			}
-// 		}
-// 	}
-// );

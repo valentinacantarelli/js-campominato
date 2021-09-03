@@ -6,6 +6,7 @@
 body{
     background-color: antiquewhite;
     background-image: url(../pexels-suzy-hazelwood-1629236.jpg);
+    
 }
 
 #campo{
@@ -18,14 +19,20 @@ body{
 .caselle{
     width: 60px;
     height: 60px;
-    contain: "\f520";
     background-color: rgb(41, 41, 78);
     border: 1px solid rgba(240, 165, 221, 0.4);
     border-radius: 5px;
     box-shadow:inset 1px 1px  9px rgb(100, 70, 96);
 }
+.caselle-click::after {
+    content: "\2605";
+    color: purple;
+    font-size: 40px;
+    margin:-2px;
+    line-height:60px ;
+}
 .caselle-click{
-    content: "\f520";
+    
     background: rgb(27,107,74);
     background: radial-gradient(circle, rgba(27,107,74,1) 0%, rgba(70,252,228,1) 100%); 
 }
