@@ -50,40 +50,50 @@ for (var i=1; i<=16;i++){
     }
 };
 console.log(numeriRandomBombe);
-//livello gioco
-// var livello = document.getElementById("livello-gioco").value;
-// var livelloBase=100;
-// var livelloMedio=80;
-// var livelloAvanzato=50;
 
+var numeriConsentiti=[];
+var chance=livelloBase-bombe; 
+var bombe=16;
 
-// if (livello == "base"){
-//     livello=livelloBase;
-// }else if(livello == "medio"){
-//     livello=livelloMedio;
-// }else{
-//     livello=livelloAvanzato;
-// }
-// console.log(livello);
- 
+//eventi al click,funzionamento del gioco
 
-  
+  document.getElementById("campo").addEventListener("click",
+     function(event){
+         var numeroCliccato=parseInt(event.target.innerHTML);
+         if(inArray(numeriRandomBombe,numeroCliccato) == true){
+             alert("Hai perso! U__U Il tuo punteggio è:"+ numeriConsentiti.length);
+             location.reload();
+         }else if(inArray(numeriConsentiti,numeroCliccato)==true){
+             alert("Hai già cliccato questa casella!");
+         }else{
+             numeriConsentiti.push(numeroCliccato);
+             event.target.classList.add("caselle-click");
+             if(numeriConsentiti.length==chance){
+                 alert("Hai vinto!!");
+                 location.reload();
+             }
+         }
 
-// // var numeroCelle=parseInt(prompt("Ciao,scegli il numero di celle tra 1 e 100"));
-// // // console.log(numeroCelle);
+     }
 
-// //  function creazioneGriglia(num1){
-// //     for (var i=1;i<=num1;i++){
-// //         document.getElementById("campo").innerHTML+=`<div class="caselle">${i}</div>`;
-// //     } 
-// //    }
+  );
 
-// //   creazioneGriglia(numeroCelle);
+// document.getElementById("campo").addEventListener("click",
+// 	function(event) {
+// 		var numeroCliccato = parseInt(event.target.innerHTML);
+// 		if ( inArray(bombe, numeroCliccato) == true ) {
+// 			alert("Hai perso! mi disp!! il tuo punteggio: " + numeriValidi.length);
+// 			location.reload();
+// 		} else if ( inArray(numeriValidi, numeroCliccato) == true ) {
+// 			alert("hai gia cliccato su questo numero! :p");
+// 		} else {
+// 			numeriValidi.push(numeroCliccato);
+// 			event.target.classList.add("cliccato");
 
-// // document.getElementById("campo").addEventListener("click",
-// //    function(event){
-// //        event.target.classList.add("caselle-click");
-// //        alert(event.target.innerHTML);
-// //    }
-
-// // );
+// 			if ( numeriValidi.length == possibilita ) {
+// 				alert("Bravissimo!! hai finito il gioco!!");
+// 				location.reload();
+// 			}
+// 		}
+// 	}
+// );
