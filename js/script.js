@@ -69,7 +69,7 @@ document.getElementById("campo").addEventListener("click",
             numeriConsentiti.push(numeroCliccato);
             event.target.classList.add("caselle-click");
             if(numeriConsentiti.length==chance){
-                alert("Hai vinto!!");
+                alert("Hai vinto!! ^__^");
                 location.reload();
             }
         }

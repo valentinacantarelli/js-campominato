@@ -6,12 +6,13 @@
 body{
     background-color: antiquewhite;
     background-image: url(../pexels-suzy-hazelwood-1629236.jpg);
-    
+    font-size: 10px;
+    color: grey;
 }
 
 #campo{
     display: flex;
-    padding-top: 30px;
+    padding-top: 40px;
     flex-wrap: wrap;
     margin: auto;
     max-width: 600px;
@@ -28,7 +29,7 @@ body{
     content: "\2605";
     color: rgb(107, 11, 107);
     font-size: 40px;
-    margin:-2px;
+    
     line-height:60px ;
 }
 .caselle-click{
