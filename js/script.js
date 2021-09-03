@@ -15,7 +15,7 @@ function creazioneGriglia(num1){
     for (var i=1;i<=num1;i++){
         document.getElementById("campo").innerHTML+=`<div class="caselle">${i}</div>`;
     } 
-   }
+}
 
 function inArray(arr, el) {
 	var count = 0;
@@ -42,13 +42,13 @@ for (var i=1; i<=16;i++){
     }else{
         while(check === true){
             numero = Math.floor(Math.random()*100)+1;
-          check = numeriRandomBombe.includes(numero);
+            check = numeriRandomBombe.includes(numero);
             if(check === false){
                 numeriRandomBombe.push(numero);
             }
-          }
+        }
     }
-};
+}
 console.log(numeriRandomBombe);
 
 var numeriConsentiti=[];

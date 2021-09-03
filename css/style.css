@@ -26,7 +26,7 @@ body{
 }
 .caselle-click::after {
     content: "\2605";
-    color: purple;
+    color: rgb(107, 11, 107);
     font-size: 40px;
     margin:-2px;
     line-height:60px ;
