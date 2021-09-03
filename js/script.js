@@ -10,6 +10,27 @@
 // con difficoltà 1 => tra 1 e 80
 // con difficoltà 2 => tra 1 e 50
 
+//funzioni
+function creazioneGriglia(num1){
+    for (var i=1;i<=num1;i++){
+        document.getElementById("campo").innerHTML+=`<div class="caselle">${i}</div>`;
+    } 
+   }
+
+function inArray(arr, el) {
+	var count = 0;
+	while ( count < arr.length ) {
+		if ( arr[count] == el ) {
+			return true;
+		}
+		count++;
+	}
+	return false;
+}
+
+var livelloBase=100;
+creazioneGriglia(livelloBase);
+
 //array che conterrà i numeri random per le caselle in cui ci sono le bombe
 var numeriRandomBombe=[];
 //creo un ciclo che mi restituisca 16 numeri random tra 1 e 100
@@ -30,27 +51,23 @@ for (var i=1; i<=16;i++){
 };
 console.log(numeriRandomBombe);
 //livello gioco
-var livello = document.getElementById("livello-gioco").value;
-var livelloBase=100;
-var livelloMedio=80;
-var livelloAvanzato=50;
+// var livello = document.getElementById("livello-gioco").value;
+// var livelloBase=100;
+// var livelloMedio=80;
+// var livelloAvanzato=50;
 
 
-if (livello == "base"){
-    livello=livelloBase;
-}else if(livello == "medio"){
-    livello=livelloMedio;
-}else{
-    livello=livelloAvanzato;
-}
-console.log(livello);
- function creazioneGriglia(num1){
-    for (var i=1;i<=num1;i++){
-        document.getElementById("campo").innerHTML+=`<div class="caselle">${i}</div>`;
-    } 
-   }
+// if (livello == "base"){
+//     livello=livelloBase;
+// }else if(livello == "medio"){
+//     livello=livelloMedio;
+// }else{
+//     livello=livelloAvanzato;
+// }
+// console.log(livello);
+ 
 
-  creazioneGriglia(livello);
+  
 
 // // var numeroCelle=parseInt(prompt("Ciao,scegli il numero di celle tra 1 e 100"));
 // // // console.log(numeroCelle);

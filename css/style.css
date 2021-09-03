@@ -18,7 +18,8 @@ body{
     width: 60px;
     height: 60px;
     background-color: palevioletred;
-    border: 1px solid purple;
+    border: 2px solid purple;
+    box-shadow:inset 1px 1px  9px rgb(100, 70, 96);
 }
 .caselle-click{
     background-color: purple;
